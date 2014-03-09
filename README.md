@@ -1,5 +1,5 @@
 # Reddit Logger
-`Reddit Logger` in essence, is a PHP program that logs links from [Reddit](http://reddit.com) into a MySQL database every day
+`Reddit Logger` in essence, is a PHP program that logs links from [Reddit](http://reddit.com) into a MySQL database every day. It's like DVR for Reddit links.
 
 ## Sales Pitch
 
