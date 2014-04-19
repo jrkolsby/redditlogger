@@ -24,9 +24,7 @@ min-width: 480px;
 </head>
 <body>
 <?php
-
 include 'credentials.php';
-
 $link = mysql_connect('localhost', $credentials['db_user'], $credentials['db_pass']); 
 if (!$link) { 
 	die('Could not connect: ' . mysql_error());
@@ -60,12 +58,12 @@ if (!isset($_COOKIE['reddituser'])) {
 	$query = "SELECT * FROM posts ORDER BY subreddit DESC"; 
 	$result = mysql_query($query) or die(mysql_error());
 	while($row = mysql_fetch_array($result)){
-		if ($row[date] == $date_current && in_array(strtolower($row[subreddit]), $subreddits_array)) {
+		if ($row['date'] == $date_current && in_array(strtolower($row['subreddit']), $subreddits_array)) {
 			$links = true;
 			print "<div class='link'>";
-			print "<div class='score'>" . $row[score] . "</div>";
-			print "<div class='title'><a href='" . $row[link] . "'>" . $row[title] . "</a></div>";
-			print "<h3>Submitted by <a href='http://reddit.com/u/" . $row[author] . "'>" . $row[author] . "</a> to <a href='http://reddit.com/r/" . $row[subreddit] . "'>" . $row[subreddit] . "</a> <b><a href='http://reddit.com" . $row[comment] . "'>Comments</a></b> <i>(" . $row[domain] . ")</i></h3>";
+			print "<div class='score'>" . $row['score'] . "</div>";
+			print "<div class='title'><a href='" . $row['link'] . "'>" . $row['title'] . "</a></div>";
+			print "<h3>Submitted by <a href='http://reddit.com/u/" . $row['author'] . "'>" . $row[author] . "</a> to <a href='http://reddit.com/r/" . $row['subreddit'] . "'>" . $row['subreddit'] . "</a> <b><a href='http://reddit.com" . $row['comment'] . "'>Comments</a></b> <i>(" . $row['domain'] . ")</i></h3>";
 			print "</div>";
 		}
 	}
