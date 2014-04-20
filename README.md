@@ -5,7 +5,7 @@
 
 Going on vacation? Studying for exams? Don't let all of those beautiful, blue links go to waste. Each day, RedditLogger records the seven top links of ten subreddits of your choosing, allowing you access to a beautifully-designed Reddit timeline upon your return.
 
-### [Repo hosted here](http://jmkl.co/redditlogger/)
+### [Repo hosted here](http://redditlogger.com/)
 
 
 ## Development
